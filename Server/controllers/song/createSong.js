@@ -1,4 +1,3 @@
-// 📁 controllers/song/createSong.js
 const fs = require('fs');
 const path = require('path');
 const Ajv = require('ajv');
@@ -53,7 +52,7 @@ module.exports = (req, res) => {
     // Adding missing chords
     if (missingChords.length > 0) {
         missingChords.forEach(missingChord => {
-            const newChordId = existingChords.length + 1; // Generování nového ID pro akord
+            const newChordId = Date.now(); // New iD
             existingChords.push({ id: newChordId, chord: missingChord.chord });
         });
 
@@ -64,7 +63,7 @@ module.exports = (req, res) => {
     const songs = JSON.parse(rawSongData);
 
 
-    const newSongId = songs.length + 1;
+    const newSongId = Date.now();
 
     const newSong = {
         id: newSongId,

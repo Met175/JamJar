@@ -1,79 +1,47 @@
 [
   {
-    "id": 1,
-    "title": "My New Song upravený",
-    "author": "Test Author",
-    "genre": "rock",
-    "key": "C",
-    "rating": 5,
-    "chords": [
-      {
-        "id": 1,
-        "chord": "Z",
-        "section": "verse"
-      }
-    ],
-    "text": "salalalali"
-  },
-  {
-    "id": 2,
-    "title": "My New Song",
+    "id": 1746985461744,
+    "title": "My New Song test 9",
     "author": "Test Author",
     "text": "salalalal",
-    "genre": "rock",
-    "key": "C",
+    "genre": "blues",
+    "key": "Em",
     "rating": 5,
     "chords": [
       {
-        "id": 1,
-        "chord": "C",
+        "chord": "Bb",
         "section": "verse"
       },
       {
-        "id": 2,
         "chord": "G",
         "section": "chorus"
       },
       {
-        "id": 3,
-        "chord": "Am",
+        "chord": "C",
         "section": "verse"
       }
     ]
   },
   {
-    "id": 3,
-    "title": "My New Song 2",
+    "id": 1746985546939,
+    "title": "My New Song test 9",
     "author": "Test Author",
-    "text": "salalalali",
-    "genre": "rock",
-    "key": "C",
-    "rating": 5,
-    "chords": []
-  },
-  {
-    "id": 4,
-    "title": "Imagine",
-    "author": "John Lennon",
-    "text": "Imagine there's no heaven...",
-    "genre": "rock",
-    "key": "C",
+    "text": "salalalal",
+    "genre": "blues",
+    "key": "Em",
     "rating": 5,
     "chords": [
       {
-        "id": 1,
-        "chord": "C",
+        "chord": "Bb",
         "section": "verse"
       },
       {
-        "id": 2,
-        "chord": "F",
-        "section": "verse"
-      },
-      {
-        "id": 3,
         "chord": "G",
         "section": "chorus"
+      },
+      {
+        "chord": "C",
+        "section": "verse"
       }
     ]
   }

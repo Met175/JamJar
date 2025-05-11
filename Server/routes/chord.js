@@ -9,7 +9,7 @@ const deleteChord = require('../controllers/chord/deleteChord');
 
 router.post('/', createChord);
 router.get('/:id', getChord);
-router.get('/list', listChord);
+router.get('/', listChord);
 router.put('/:id', updateChord);
 router.delete('/:id', deleteChord);
 
