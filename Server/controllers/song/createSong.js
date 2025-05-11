@@ -8,25 +8,13 @@ const { allowedGenres, allowedKeys } = require('../../shared/allowedValues');
 const songSchema = {
     type: 'object',
     properties: {
-        title: { type: 'string' },
-        author: { type: 'string' },
+        title: { type: 'string', maxLength: 20 },
+        author: { type: 'string', maxLength: 20 },
         genre: { type: 'string', enum: allowedGenres },
         text: { type: 'string' },
-        key: { type: 'string', enum: allowedKeys },
-        rating: { type: 'integer', minimum: 1, maximum: 5  },
-        chords: {
-            type: 'array',
-            items: {
-                type: 'object',
-                properties: {
-                    chord: { type: 'string' },
-                    section: { type: 'string', enum: ['verse', 'chorus', 'bridge'] },
-                },
-                required: ['chord', 'section'],
-            },
-        },
+
     },
-    required: ['title', 'author', 'genre', 'key', 'rating', 'chords'],
+    required: ['title', 'author', 'genre'],
     additionalProperties: false,
 };
 
@@ -43,22 +31,6 @@ module.exports = (req, res) => {
         return res.status(400).json({ error: 'Invalid input', details: validateSong.errors });
     }
 
-    // Chords load
-    const chordData = fs.readFileSync(chordFilePath, 'utf8');
-    const existingChords = JSON.parse(chordData);
-
-    const missingChords = songData.chords.filter(chord => !existingChords.some(existingChord => existingChord.chord === chord.chord));
-
-    // Adding missing chords
-    if (missingChords.length > 0) {
-        missingChords.forEach(missingChord => {
-            const newChordId = Date.now(); // New iD
-            existingChords.push({ id: newChordId, chord: missingChord.chord });
-        });
-
-        fs.writeFileSync(chordFilePath, JSON.stringify(existingChords, null, 2));
-    }
-
     const rawSongData = fs.readFileSync(songFilePath, 'utf8');
     const songs = JSON.parse(rawSongData);
 
@@ -72,8 +44,7 @@ module.exports = (req, res) => {
         text: songData.text,
         genre: songData.genre,
         key: songData.key,
-        rating: songData.rating,
-        chords: songData.chords,
+        rating: null,
     };
 
     songs.push(newSong);
@@ -81,5 +52,6 @@ module.exports = (req, res) => {
     fs.writeFileSync(songFilePath, JSON.stringify(songs, null, 2));
 
     res.status(201).json(newSong);
+
 };
 
