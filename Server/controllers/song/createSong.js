@@ -12,9 +12,9 @@ const songSchema = {
         author: { type: 'string', maxLength: 20 },
         genre: { type: 'string', enum: allowedGenres },
         text: { type: 'string' },
-
+        key: { type: 'string', enum: allowedKeys },
     },
-    required: ['title', 'author', 'genre'],
+    required: ['title', 'author', 'genre', 'key'],
     additionalProperties: false,
 };
 
