@@ -152,7 +152,7 @@ function AddSongForm({ show, onHide, onSongAdded }) {
                 <Button variant="outline-danger" onClick={() => handleRemoveChord(idx)} disabled={chords.length === 1}>-</Button>
               </div>
             ))}
-            <Button variant="outline-primary" onClick={handleAddChord} size="sm">Přidat akord</Button>
+            <Button variant="outline-primary" onClick={handleAddChord} size="sm">Add chord</Button>
           </div>
           <div className="d-flex justify-content-end">
             <Button variant="dark" type="submit" disabled={loading}>

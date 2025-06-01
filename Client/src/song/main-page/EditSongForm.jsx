@@ -128,13 +128,13 @@ function EditSongForm({ song, show, onHide, onSongUpdated }) {
             <textarea className="form-control" value={text} onChange={e => setText(e.target.value)} rows={3} />
           </div>
           <div className="mb-3">
-            <label className="form-label">Akordy</label>
+            <label className="form-label">Chords</label>
             {chords.map((c, idx) => (
               <div className="d-flex mb-2" key={idx}>
                 <input
                   type="text"
                   className="form-control me-2"
-                  placeholder="Akord"
+                  placeholder="Chord"
                   value={c.chord}
                   onChange={e => handleChordChange(idx, 'chord', e.target.value)}
                   style={{ maxWidth: 100 }}
@@ -145,14 +145,14 @@ function EditSongForm({ song, show, onHide, onSongUpdated }) {
                   onChange={e => handleChordChange(idx, 'section', e.target.value)}
                   style={{ maxWidth: 120 }}
                 >
-                  <option value="verse">Sloka</option>
-                  <option value="chorus">Refrén</option>
+                  <option value="verse">Verse</option>
+                  <option value="chorus">Chorus</option>
                   <option value="bridge">Bridge</option>
                 </select>
                 <Button variant="outline-danger" onClick={() => handleRemoveChord(idx)} disabled={chords.length === 1}>-</Button>
               </div>
             ))}
-            <Button variant="outline-primary" onClick={handleAddChord} size="sm">Přidat akord</Button>
+            <Button variant="outline-primary" onClick={handleAddChord} size="sm">Add Chord</Button>
           </div>
           <div className="d-flex justify-content-end">
             <Button variant="dark" type="submit" disabled={loading}>

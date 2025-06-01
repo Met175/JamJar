@@ -6,7 +6,7 @@
     "text": "salalalal",
     "genre": "blues",
     "key": "D",
-    "rating": 4,
+    "rating": 3,
     "chords": [
       {
         "chord": "G",
@@ -83,7 +83,7 @@
     "author": "Test Author",
     "text": "salalalal",
     "genre": "blues",
-    "rating": 2,
+    "rating": 3,
     "key": "C",
     "chords": [
       {
@@ -118,16 +118,7 @@
     "text": "aaa",
     "genre": "rock",
     "key": "Am",
-    "chords": [
-      {
-        "chord": "Am",
-        "section": "verse"
-      },
-      {
-        "chord": "B",
-        "section": "verse"
-      }
-    ],
+    "chords": [],
     "rating": 4
   },
   {
@@ -140,6 +131,21 @@
     "chords": [
       {
         "chord": "Cm",
+        "section": "verse"
+      }
+    ],
+    "rating": 3
+  },
+  {
+    "id": 1748808228078,
+    "title": "Nová věc",
+    "author": "ja",
+    "text": "",
+    "genre": "rock",
+    "key": "C",
+    "chords": [
+      {
+        "chord": "G",
         "section": "verse"
       }
     ],
