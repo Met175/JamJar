@@ -1,84 +1,15 @@
 [
   {
-    "id": 1746985461744,
-    "title": "My New Song test 9",
-    "author": "Test Author",
-    "text": "salalalal",
-    "genre": "blues",
-    "key": "Em",
-    "rating": 5,
-    "chords": [
-      {
-        "chord": "Bb",
-        "section": "verse"
-      },
-      {
-        "chord": "G",
-        "section": "chorus"
-      },
-      {
-        "chord": "C",
-        "section": "verse"
-      }
-    ]
-  },
-  {
-    "id": 1746986605942,
-    "title": "My New Song test 1",
-    "author": "Test Author",
-    "text": "salalalal",
-    "genre": "blues",
-    "key": "C",
-    "rating": 5,
-    "chords": [
-      {
-        "chord": "Bb",
-        "section": "verse"
-      },
-      {
-        "chord": "G",
-        "section": "chorus"
-      },
-      {
-        "chord": "C",
-        "section": "verse"
-      }
-    ]
-  },
-  {
-    "id": 1746986616012,
-    "title": "My New Song test 2",
-    "author": "Test Author",
-    "text": "salalalal",
-    "genre": "blues",
-    "key": "C",
-    "rating": 5,
-    "chords": [
-      {
-        "chord": "Bb",
-        "section": "verse"
-      },
-      {
-        "chord": "G",
-        "section": "chorus"
-      },
-      {
-        "chord": "C",
-        "section": "verse"
-      }
-    ]
-  },
-  {
     "id": 1746987812533,
     "title": "My New Song test 2",
     "author": "Test Author",
     "text": "salalalal",
     "genre": "blues",
     "key": "D",
-    "rating": 1,
+    "rating": 4,
     "chords": [
       {
-        "chord": "Bb",
+        "chord": "Z",
         "section": "verse"
       },
       {
@@ -87,6 +18,10 @@
       },
       {
         "chord": "C",
+        "section": "verse"
+      },
+      {
+        "chord": "G",
         "section": "verse"
       }
     ]
@@ -97,8 +32,8 @@
     "author": "Test Author",
     "text": "salalalal",
     "genre": "blues",
-    "key": "D",
-    "rating": null,
+    "key": "C",
+    "rating": 5,
     "chords": [
       {
         "chord": "Bb",
@@ -116,12 +51,12 @@
   },
   {
     "id": 1746988312931,
-    "title": "My New Song test 2",
-    "author": "Test Author",
+    "title": "My New Song test 3",
+    "author": "Test Author 2",
     "text": "salalalal",
-    "genre": "blues",
-    "key": "D",
-    "rating": null,
+    "genre": "rock",
+    "key": "C#",
+    "rating": 5,
     "chords": [
       {
         "chord": "A",
@@ -144,7 +79,7 @@
     "text": "salalalal",
     "genre": "blues",
     "key": "D",
-    "rating": null
+    "rating": 2
   },
   {
     "id": 1746990360807,
@@ -152,7 +87,7 @@
     "author": "Test Author",
     "text": "salalalal",
     "genre": "blues",
-    "rating": null,
+    "rating": 2,
     "key": "C",
     "chords": [
       {
@@ -164,40 +99,5 @@
         "section": "chorus"
       }
     ]
-  },
-  {
-    "id": 1746997875906,
-    "title": "Final Test",
-    "author": "Pepa",
-    "text": "salalalalí",
-    "genre": "metal",
-    "rating": 3,
-    "chords": [
-      {
-        "chord": "D",
-        "section": "chorus"
-      },
-      {
-        "chord": "Cmaj7",
-        "section": "verse"
-      },
-      {
-        "chord": "Am",
-        "section": "chorus"
-      },
-      {
-        "chord": "F",
-        "section": "bridge"
-      }
-    ],
-    "key": "D"
-  },
-  {
-    "id": 1748729931601,
-    "title": "a",
-    "author": "a",
-    "text": "a",
-    "genre": "rock",
-    "rating": null
   }
 ]

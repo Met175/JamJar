@@ -1,4 +1,5 @@
 import React from 'react';
+import SongRating from './SongRating';
 
 function SongDetail({ song, onClose, onEdit }) {
   if (!song) return null;
@@ -12,19 +13,55 @@ function SongDetail({ song, onClose, onEdit }) {
             <button type="button" className="btn-close" aria-label="Close" onClick={onClose}></button>
           </div>
           <div className="modal-body">
-            <p><strong>Genre:</strong> {song.genre}</p>
-            {song.text && <p><strong>Text:</strong><br />{song.text}</p>}
+            <div><strong>Genre:</strong> {song.genre}</div>
+            <div>
+              <strong>Rating:</strong>{' '}
+              <SongRating rating={song.rating || 0} readonly />
+            </div>
+            {song.text && <div><strong>Text:</strong><br />{song.text}</div>}
             {song.chords && song.chords.length > 0 && (
               <div>
                 <strong>Chords:</strong>
-                <ul>
-                  {song.chords.map((ch, idx) => (
-                    <li key={idx}>{ch.chord} <span className="text-muted">({ch.section})</span></li>
-                  ))}
-                </ul>
+                <div className="mt-2">
+                  {song.chords.some(ch => ch.section === 'verse') && (
+                    <div className="mb-2">
+                      <div className="text-muted mb-1">Verse:</div>
+                      <div className="d-flex gap-2">
+                        {song.chords
+                          .filter(ch => ch.section === 'verse')
+                          .map((ch, idx) => (
+                            <span key={idx} className="badge bg-light text-dark border">{ch.chord}</span>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                  {song.chords.some(ch => ch.section === 'chorus') && (
+                    <div className="mb-2">
+                      <div className="text-muted mb-1">Chorus:</div>
+                      <div className="d-flex gap-2">
+                        {song.chords
+                          .filter(ch => ch.section === 'chorus')
+                          .map((ch, idx) => (
+                            <span key={idx} className="badge bg-light text-dark border">{ch.chord}</span>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                  {song.chords.some(ch => ch.section === 'bridge') && (
+                    <div className="mb-2">
+                      <div className="text-muted mb-1">Bridge:</div>
+                      <div className="d-flex gap-2">
+                        {song.chords
+                          .filter(ch => ch.section === 'bridge')
+                          .map((ch, idx) => (
+                            <span key={idx} className="badge bg-light text-dark border">{ch.chord}</span>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
-            {song.rating && <p><strong>Rating:</strong> {song.rating}/5</p>}
             {song.key && <p><strong>Key:</strong> {song.key}</p>}
           </div>
           <div className="modal-footer">

@@ -37,7 +37,7 @@ module.exports = (req, res) => {
         }
 
         if (query.key) {
-            filteredSongs = filteredSongs.filter(song => song.key.toLowerCase() === query.key.toLowerCase());
+            filteredSongs = filteredSongs.filter(song => song.key === query.key);
         }
 
         res.status(200).json(filteredSongs);
