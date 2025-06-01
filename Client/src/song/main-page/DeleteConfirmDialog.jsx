@@ -5,17 +5,17 @@ function DeleteConfirmDialog({ show, onHide, onConfirm, songTitle }) {
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>
-        <Modal.Title>Smazat píseň</Modal.Title>
+        <Modal.Title>Delete Song</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        Opravdu chcete smazat píseň "{songTitle}"?
+        Are you sure you want to delete the song "{songTitle}"?
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={onHide}>
-          Zrušit
+          Cancel
         </Button>
         <Button variant="danger" onClick={onConfirm}>
-          Smazat
+          Delete
         </Button>
       </Modal.Footer>
     </Modal>

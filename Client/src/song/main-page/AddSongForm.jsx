@@ -39,7 +39,7 @@ function AddSongForm({ show, onHide, onSongAdded }) {
         key,
         ...(chords.filter(c => c.chord.trim() !== '').length > 0 ? { chords: chords.filter(c => c.chord.trim() !== '') } : {})
       });
-      setSuccess('Píseň byla úspěšně přidána!');
+      setSuccess('Song was successfully added!');
       setTitle('');
       setAuthor('');
       setGenre('rock');
@@ -48,7 +48,7 @@ function AddSongForm({ show, onHide, onSongAdded }) {
       setChords([{ chord: '', section: 'verse' }]);
       if (onSongAdded) onSongAdded(res.data);
     } catch (err) {
-      setError('Chyba při přidávání písně.');
+      setError('Error adding song.');
     } finally {
       setLoading(false);
     }
@@ -156,7 +156,7 @@ function AddSongForm({ show, onHide, onSongAdded }) {
           </div>
           <div className="d-flex justify-content-end">
             <Button variant="dark" type="submit" disabled={loading}>
-              {loading ? 'Ukládám...' : 'Jam'}
+              {loading ? 'Saving...' : 'Jam'}
             </Button>
           </div>
         </form>

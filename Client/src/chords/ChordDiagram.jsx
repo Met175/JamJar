@@ -25,7 +25,7 @@ function ChordDiagram({ chord }) {
   if (!diagramData) {
     return (
       <div className="text-center text-muted">
-        <small>Diagram není k dispozici</small>
+        <small>Diagram isn't available</small>
       </div>
     );
   }

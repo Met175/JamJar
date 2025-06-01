@@ -49,7 +49,7 @@ function EditSongForm({ song, show, onHide, onSongUpdated }) {
       if (onSongUpdated) onSongUpdated(res.data.data);
       onHide();
     } catch (err) {
-      setError('Chyba při ukládání změn.');
+      setError('Error updating song.');
     } finally {
       setLoading(false);
     }
@@ -156,7 +156,7 @@ function EditSongForm({ song, show, onHide, onSongUpdated }) {
           </div>
           <div className="d-flex justify-content-end">
             <Button variant="dark" type="submit" disabled={loading}>
-              {loading ? 'Ukládám...' : 'Uložit změny'}
+              {loading ? 'Saving...' : 'Save changes'}
             </Button>
           </div>
         </form>

@@ -28,7 +28,7 @@ function MainPage() {
       setSongs(res.data);
     } catch (err) {
       setError('Failed loading songs.');
-      console.error('Chyba při načítání písní:', err);
+      console.error('Error loading songs:', err);
     } finally {
       setLoading(false);
     }
@@ -43,7 +43,7 @@ function MainPage() {
       await axios.delete(`/song/${id}`);
       setSongs(songs => songs.filter(song => song.id !== id));
     } catch (err) {
-      alert('Chyba při mazání písně.');
+      alert('Failed to delete song.');
     }
   };
 
@@ -52,7 +52,7 @@ function MainPage() {
       const res = await axios.put(`/song/${songId}`, { rating });
       setSongs(songs => songs.map(s => s.id === songId ? { ...s, rating: res.data.data.rating } : s));
     } catch (err) {
-      alert('Chyba při hodnocení písně.');
+      alert('Failed to rate song.');
     }
   };
   return (

@@ -19,12 +19,12 @@ function AddChordForm({ show, onHide, onChordAdded }) {
         name: chord,
         section
       });
-      setSuccess('Akord byl úspěšně přidán!');
+      setSuccess('Chord was successfully added!');
       setChord('');
       setSection('verse');
       if (onChordAdded) onChordAdded(res.data);
     } catch (err) {
-      setError('Chyba při přidávání akordu.');
+      setError('Error adding chord.');
     } finally {
       setLoading(false);
     }
@@ -33,27 +33,27 @@ function AddChordForm({ show, onHide, onChordAdded }) {
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>
-        <Modal.Title>Přidat akord</Modal.Title>
+        <Modal.Title>Add Chord</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <form onSubmit={handleSubmit}>
           {error && <div className="alert alert-danger">{error}</div>}
           {success && <div className="alert alert-success">{success}</div>}
           <div className="mb-3">
-            <label className="form-label">Název akordu</label>
+            <label className="form-label">Chord Name</label>
             <input type="text" className="form-control" value={chord} onChange={e => setChord(e.target.value)} required maxLength={10} />
           </div>
           <div className="mb-3">
-            <label className="form-label">Sekce</label>
+            <label className="form-label">Section</label>
             <select className="form-select" value={section} onChange={e => setSection(e.target.value)}>
-              <option value="verse">Sloka</option>
-              <option value="chorus">Refrén</option>
+              <option value="verse">Verse</option>
+              <option value="chorus">Chorus</option>
               <option value="bridge">Bridge</option>
             </select>
           </div>
           <div className="d-flex justify-content-end">
             <Button variant="dark" type="submit" disabled={loading}>
-              {loading ? 'Ukládám...' : 'Přidat akord'}
+              {loading ? 'Saving...' : 'Add Chord'}
             </Button>
           </div>
         </form>

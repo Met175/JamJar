@@ -16,7 +16,7 @@ function ChordList() {
         setLoading(false);
       } catch (err) {
         console.error('Error fetching chords:', err);
-        setError('Nepodařilo se načíst akordy');
+        setError('Failed to load chords');
         setLoading(false);
       }
     };
@@ -24,25 +24,43 @@ function ChordList() {
     fetchChords();
   }, []);
 
-  if (loading) return <div className="text-center mt-5">Načítám...</div>;
+  const handleDeleteChord = async (chordId) => {
+    try {
+      await axios.delete(`/chords/${chordId}`);
+      setChords(prevChords => prevChords.filter(chord => chord.id !== chordId));
+    } catch (err) {
+      console.error('Error deleting chord:', err);
+      setError('Failed to delete chord');
+    }
+  };
+
+  if (loading) return <div className="text-center mt-5">Loading...</div>;
   if (error) return <div className="alert alert-danger mt-3">{error}</div>;
 
   return (
     <Container className="mt-4">
-      <h2 className="mb-4">Knihovna akordů</h2>
+      <h2 className="mb-4">Chord Library</h2>
       <Row xs={1} md={2} lg={3} className="g-4">
         {chords.map((chord) => (
           <Col key={chord.id}>
-            <Card className="h-100">
+            <Card className="h-100 position-relative">
+              <button
+                className="position-absolute btn-close"
+                style={{
+                  top: '10px',
+                  right: '10px',
+                  zIndex: 1,
+                  background: 'transparent',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '1.5rem',
+                  color: '#dc3545',
+                }}
+                onClick={() => handleDeleteChord(chord.id)}
+                aria-label="Delete chord"
+              >×</button>
               <Card.Body>
                 <Card.Title className="text-center">{chord.chord}</Card.Title>
-                {chord.section && (
-                  <Card.Subtitle className="mb-2 text-muted text-center">
-                    {chord.section === 'verse' && 'Sloka'}
-                    {chord.section === 'chorus' && 'Refrén'}
-                    {chord.section === 'bridge' && 'Bridge'}
-                  </Card.Subtitle>
-                )}
                 <div className="text-center mb-3">
                   <ChordDiagram chord={chord.chord} />
                 </div>
@@ -52,7 +70,7 @@ function ChordList() {
         ))}
       </Row>
       {chords.length === 0 && !loading && !error && (
-        <div className="alert alert-info">Zatím nejsou přidány žádné akordy.</div>
+        <div className="alert alert-info">No chords have been added yet.</div>
       )}
     </Container>
   );

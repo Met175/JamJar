@@ -13,6 +13,18 @@ const songSchema = {
         genre: { type: 'string', enum: allowedGenres },
         text: { type: 'string' },
         key: { type: 'string', enum: allowedKeys },
+         chords: {
+            type: 'array',
+            items: {
+                type: 'object',
+                properties: {
+                    chord: { type: 'string' },
+                    section: { type: 'string', enum: ['verse', 'chorus', 'bridge'] }
+                },
+                required: ['chord', 'section'],
+                additionalProperties: false
+            }
+    },
     },
     required: ['title', 'author', 'genre', 'key'],
     additionalProperties: false,
@@ -44,6 +56,7 @@ module.exports = (req, res) => {
         text: songData.text,
         genre: songData.genre,
         key: songData.key,
+        chords: songData.chords || [],
         rating: null,
     };
 
