@@ -2,11 +2,11 @@ import React from 'react';
 
 const CHORD_DIAGRAMS = {
   // Major chords
-  'C': { positions: [[0,1,0,2,3,0]], fret: 0, barre: null },
-  'D': { positions: [[2,3,2,0,0,2]], fret: 0, barre: null },
-  'E': { positions: [[0,0,1,2,2,0]], fret: 0, barre: null },
-  'F': { positions: [[1,1,2,3,3,1]], fret: 0, barre: 1 },
-  'G': { positions: [[3,3,0,0,0,3]], fret: 0, barre: null },
+  'C': { positions: [[0,3,2,0,1,0]], fret: 0, barre: null },
+  'D': { positions: [[0,0,0,2,3,2]], fret: 0, barre: null },
+  'E': { positions: [[0,2,2,1,0,0]], fret: 0, barre: null },
+  'F': { positions: [[1,3,3,2,1,1]], fret: 0, barre: 1 },
+  'G': { positions: [[3,2,0,0,0,3]], fret: 0, barre: null },
   'A': { positions: [[0,0,2,2,2,0]], fret: 0, barre: null },
   'B': { positions: [[2,2,4,4,4,2]], fret: 0, barre: 2 },
   
@@ -14,8 +14,8 @@ const CHORD_DIAGRAMS = {
   'Am': { positions: [[0,0,2,2,1,0]], fret: 0, barre: null },
   'Bm': { positions: [[2,2,4,4,3,2]], fret: 0, barre: 2 },
   'Cm': { positions: [[3,3,5,5,4,3]], fret: 0, barre: 3 },
-  'Dm': { positions: [[1,3,2,0,0,1]], fret: 0, barre: null },
-  'Em': { positions: [[0,0,0,2,2,0]], fret: 0, barre: null },
+  'Dm': { positions: [[0,0,0,2,3,1]], fret: 0, barre: null },
+  'Em': { positions: [[0,2,2,0,0,0]], fret: 0, barre: null },
   'Fm': { positions: [[1,3,3,1,1,1]], fret: 0, barre: 1 },
   'Gm': { positions: [[3,5,5,3,3,3]], fret: 0, barre: 3 },
 };

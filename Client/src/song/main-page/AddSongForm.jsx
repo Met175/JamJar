@@ -145,8 +145,8 @@ function AddSongForm({ show, onHide, onSongAdded }) {
                   onChange={e => handleChordChange(idx, 'section', e.target.value)}
                   style={{ maxWidth: 120 }}
                 >
-                  <option value="verse">Sloka</option>
-                  <option value="chorus">Refrén</option>
+                  <option value="verse">Verse</option>
+                  <option value="chorus">Chorus</option>
                   <option value="bridge">Bridge</option>
                 </select>
                 <Button variant="outline-danger" onClick={() => handleRemoveChord(idx)} disabled={chords.length === 1}>-</Button>

@@ -18,7 +18,7 @@ function SongDetail({ song, onClose, onEdit }) {
               <strong>Rating:</strong>{' '}
               <SongRating rating={song.rating || 0} readonly />
             </div>
-            {song.text && <div><strong>Text:</strong><br />{song.text}</div>}
+            {song.text && <div><strong>Text:</strong><br /> <div style={{ whiteSpace: 'pre-line' }}>{song.text}</div> </div>}
             {song.chords && song.chords.length > 0 && (
               <div>
                 <strong>Chords:</strong>

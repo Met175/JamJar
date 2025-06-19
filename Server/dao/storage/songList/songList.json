@@ -1,59 +1,188 @@
 [
   {
-    "id": 1746987812533,
-    "title": "My New Song test 2",
-    "author": "Test Author",
-    "text": "salalalal",
-    "genre": "blues",
-    "key": "D",
-    "rating": 3,
-    "chords": [
-      {
-        "chord": "G",
-        "section": "chorus"
-      },
-      {
-        "chord": "C",
-        "section": "verse"
-      },
-      {
-        "chord": "G",
-        "section": "verse"
-      }
-    ]
-  },
-  {
-    "id": 1746988210585,
-    "title": "My New Song test 2",
-    "author": "Test Author",
-    "text": "salalalal",
-    "genre": "blues",
-    "key": "C",
-    "rating": 5,
-    "chords": [
-      {
-        "chord": "Bb",
-        "section": "verse"
-      },
-      {
-        "chord": "G",
-        "section": "chorus"
-      },
-      {
-        "chord": "C",
-        "section": "verse"
-      }
-    ]
-  },
-  {
-    "id": 1746988312931,
-    "title": "My New Song test 3",
-    "author": "Test Author 2",
-    "text": "salalalal",
+    "id": 1748808228078,
+    "title": "Nová věc",
+    "author": "ja",
+    "text": "",
     "genre": "rock",
-    "key": "C#",
-    "rating": 5,
+    "key": "C",
     "chords": [
+      {
+        "chord": "A",
+        "section": "verse"
+      }
+    ],
+    "rating": 3
+  },
+  {
+    "id": 1750337257993,
+    "title": "Heart of gold",
+    "author": "Johny Cash",
+    "text": "I want to live,\nI want to give\nI've been a miner for a heart of gold.\nIt's these expressions I never give\nThat keeps me searching for a heart of gold\n\nAnd I'm getting old.\nIt keeps me searching for a heart of gold\nAnd I'm getting old.\n\nI've been to Hollywood\nI've been to redwood\nI crossed the ocean for a heart of gold\nI've been in my mind, it's such a fine line\nThat keeps me searching for a heart of gold\n\nAnd I'm getting old.\nIt keeps me searching for a heart of gold\nAnd I'm getting old.\nYou keep me searching for a heart of gold\nI've been a miner for a heart of gold.\nAnd I'm getting old.",
+    "genre": "rock",
+    "key": "Em",
+    "chords": [
+      {
+        "chord": "Em",
+        "section": "verse"
+      },
+      {
+        "chord": "C",
+        "section": "verse"
+      },
+      {
+        "chord": "D",
+        "section": "verse"
+      },
+      {
+        "chord": "G",
+        "section": "verse"
+      },
+      {
+        "chord": "C",
+        "section": "chorus"
+      },
+      {
+        "chord": "G",
+        "section": "chorus"
+      },
+      {
+        "chord": "Em",
+        "section": "chorus"
+      },
+      {
+        "chord": "G",
+        "section": "chorus"
+      }
+    ],
+    "rating": 5
+  },
+  {
+    "id": 1750337625665,
+    "title": "Here comes the sun",
+    "author": "The Beatles",
+    "text": "Here comes the sun, doo, dun, doo, doo\nHere comes the sun, and I say\nIt's all right\n\nLittle darling, it's been a long cold lonely winter\nLittle darling, it feels like years since it's been here\nHere comes the sun, doo, dun, doo, doo\nHere comes the sun, and I say\nIt's all right\nLittle darling, the smile's returning to the faces\nLittle darling, it seems like years since it's been here\nHere comes the sun\nHere comes the sun, and I say\nIt's all right\n\nSun, sun, sun, here it comes\nSun, sun, sun, here it comes\nSun, sun, sun, here it comes\nSun, sun, sun, here it comes\nSun, sun, sun, here it comes\n\nLittle darling, I feel that ice is slowly melting\nLittle darling, it seems like years since it's been clear\nHere comes the sun, doo, dun, doo, doo\nHere comes the sun, and I say\nIt's all right\n\nHere comes the sun, doo, dun, doo, doo\nHere comes the sun\nIt's all right\nIt's all right",
+    "genre": "rock",
+    "key": "D",
+    "chords": [
+      {
+        "chord": "D",
+        "section": "verse"
+      },
+      {
+        "chord": "G",
+        "section": "verse"
+      },
+      {
+        "chord": "A7",
+        "section": "verse"
+      },
+      {
+        "chord": "D",
+        "section": "chorus"
+      },
+      {
+        "chord": "G",
+        "section": "chorus"
+      },
+      {
+        "chord": "E7",
+        "section": "chorus"
+      },
+      {
+        "chord": "D",
+        "section": "chorus"
+      },
+      {
+        "chord": "F",
+        "section": "bridge"
+      },
+      {
+        "chord": "C",
+        "section": "bridge"
+      },
+      {
+        "chord": "G",
+        "section": "bridge"
+      },
+      {
+        "chord": "D",
+        "section": "bridge"
+      },
+      {
+        "chord": "A7",
+        "section": "bridge"
+      }
+    ],
+    "rating": 4
+  },
+  {
+    "id": 1750337850920,
+    "title": "Lásko",
+    "author": "Karel Kryl",
+    "text": "Pár zbytků pro krysy\nna misce od guláše\nmilostné dopisy\ns partií mariáše\nPřed cestou dalekou\nzpocený boty zujem\na potom pod dekou\nsníme když onanujem\nLásko\nzavři se do pokoje\nLásko válka je holka moje\ns ní se miluji\nkdyž noci si krátím\nLásko slunce máš na vějíři\nLásko dvě třešně na talíři\nty ti daruji\naž jednou se vrátím\nDvacet let necelých\nOdznáček na baretu\nS úsměvem dospělých\nvytáhnem cigaretu\nV opasku u boku\nnabitou parabelu\nZpíváme do kroku\npár metrů od bordelu\nLásko zavři se do pokoje\nLásko válka je holka moje\ns ní se miluji\nkdyž noci si krátím\nLásko slunce máš na vějíři\nLásko dvě třešně na talíři\nty ti daruji\naž jednou se vrátím\nPár zbytků pro krysy\na taška na patrony\nLatrína s nápisy\njež nejsou pro matróny\nNení čas na spaní\nSmrtka nám drtí palce\nnežli se zchlastaní\nsvalíme na kavalce\nLásko zavři se do pokoje\nLásko válka je holka moje\ns ní se miluji\nkdyž noci si krátím\nLásko slunce máš na vějíři\nLásko dvě třešně na talíři\nty ti daruji\naž jednou se vrátím",
+    "genre": "folk",
+    "key": "Am",
+    "chords": [
+      {
+        "chord": "Am",
+        "section": "verse"
+      },
+      {
+        "chord": "E7",
+        "section": "verse"
+      },
+      {
+        "chord": "Dm",
+        "section": "verse"
+      },
+      {
+        "chord": "C",
+        "section": "verse"
+      },
+      {
+        "chord": "E7",
+        "section": "verse"
+      },
+      {
+        "chord": "Am",
+        "section": "chorus"
+      },
+      {
+        "chord": "G7",
+        "section": "chorus"
+      },
+      {
+        "chord": "C",
+        "section": "chorus"
+      },
+      {
+        "chord": "G",
+        "section": "chorus"
+      }
+    ],
+    "rating": 5
+  },
+  {
+    "id": 1750338090368,
+    "title": "Birds Of A Feather",
+    "author": "Billie Eilish",
+    "text": "I want you to stay\n'Til I'm in the grave\n'Til I rot away, dead and buried\n'Til I'm in the casket you carry\nIf you go, I'm going too, uh\n'Cause it was always you, alright\nAnd if I'm turnin' blue, please don't save me\nNothing left to lose without my baby\nBirds of a feather, we should stick together, I know\nI said I'd never think I wasn't better alone\nCan't change the weather, might not be forever\nBut if it's forever, it's even better\nAnd I don't know what I'm cryin' for\nI don't think I could love you more\nIt might not be long, but baby, I\nI'll love you 'til the day that I die\n'Til the day that I die\n'Til the light leaves my eyes\n'Til the day that I die\nI want you to see, hm\nHow you look to me, hm\nYou wouldn't believe if I told ya\nYou would keep the compliments I throw ya\nBut you're so full of shit, uh\nTell me it's a bit, no\nSay you don't see it, your mind's polluted\nSay you wanna quit, don't be stupid\nAnd I don't know what I'm cryin' for\nI don't think I could love you more\nMight not be long, but baby, I\nDon't wanna say goodbye\nBirds of a feather, we should stick together, I know ('til the day that I die)\nI said I'd never think I wasn't better alone ('til the light leaves my eyes)\nCan't change the weather, might not be forever ('til the day I die)\nBut if it's forever, it's even better\nI knew you in another life\nYou had that same look in your eyes\nI love you, don't act so surprised",
+    "genre": "pop",
+    "key": "D",
+    "chords": [
+      {
+        "chord": "D",
+        "section": "verse"
+      },
+      {
+        "chord": "Bm",
+        "section": "verse"
+      },
+      {
+        "chord": "Em",
+        "section": "verse"
+      },
       {
         "chord": "A",
         "section": "verse"
@@ -63,92 +192,18 @@
         "section": "chorus"
       },
       {
-        "chord": "F",
-        "section": "verse"
-      }
-    ]
-  },
-  {
-    "id": 1746990065278,
-    "title": "My New Song test 2",
-    "author": "Test Author",
-    "text": "salalalal",
-    "genre": "blues",
-    "key": "D",
-    "rating": 2
-  },
-  {
-    "id": 1746990360807,
-    "title": "My New Song test 2",
-    "author": "Test Author",
-    "text": "salalalal",
-    "genre": "blues",
-    "rating": 3,
-    "key": "C",
-    "chords": [
-      {
-        "chord": "Am",
-        "section": "verse"
+        "chord": "Bm",
+        "section": "chorus"
       },
       {
-        "chord": "F",
+        "chord": "Em",
         "section": "chorus"
-      }
-    ]
-  },
-  {
-    "id": 1748804820458,
-    "title": "Já ",
-    "author": "Já",
-    "text": "aaa",
-    "genre": "rock",
-    "key": "C",
-    "rating": 4,
-    "chords": [
+      },
       {
-        "chord": "C",
-        "section": "verse"
-      }
-    ]
-  },
-  {
-    "id": 1748806276049,
-    "title": "Ja",
-    "author": "ja",
-    "text": "aaa",
-    "genre": "rock",
-    "key": "Am",
-    "chords": [],
-    "rating": 4
-  },
-  {
-    "id": 1748806438159,
-    "title": "ff",
-    "author": "f",
-    "text": "",
-    "genre": "rock",
-    "key": "C",
-    "chords": [
-      {
-        "chord": "Cm",
-        "section": "verse"
+        "chord": "A",
+        "section": "chorus"
       }
     ],
     "rating": 3
-  },
-  {
-    "id": 1748808228078,
-    "title": "Nová věc",
-    "author": "ja",
-    "text": "",
-    "genre": "rock",
-    "key": "C",
-    "chords": [
-      {
-        "chord": "G",
-        "section": "verse"
-      }
-    ],
-    "rating": null
   }
 ]
