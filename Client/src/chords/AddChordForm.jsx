@@ -4,7 +4,6 @@ import { Modal, Button } from 'react-bootstrap';
 
 function AddChordForm({ show, onHide, onChordAdded }) {
   const [chord, setChord] = useState('');
-  const [section, setSection] = useState('verse');
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -15,19 +14,28 @@ function AddChordForm({ show, onHide, onChordAdded }) {
     setSuccess(null);
     setLoading(true);
     try {
-      const res = await axios.post('/chords', {
-        name: chord,
-        section
-      });
+      const requestData = {
+        name: chord.charAt(0).toUpperCase() + chord.slice(1).toLowerCase(),
+
+      };
+      console.log('Sending data to BE:', requestData);
+      const res = await axios.post('/chords', requestData);
+
+
       setSuccess('Chord was successfully added!');
       setChord('');
-      setSection('verse');
       if (onChordAdded) onChordAdded(res.data);
     } catch (err) {
       setError('Error adding chord.');
     } finally {
       setLoading(false);
     }
+    await new Promise(resolve => setTimeout(resolve, 300));
+    onHide();
+    window.location.reload();
+
+
+
   };
 
   return (
@@ -43,6 +51,7 @@ function AddChordForm({ show, onHide, onChordAdded }) {
             <label className="form-label">Chord Name</label>
             <input type="text" className="form-control" value={chord} onChange={e => setChord(e.target.value)} required maxLength={10} />
           </div>
+          {/*
           <div className="mb-3">
             <label className="form-label">Section</label>
             <select className="form-select" value={section} onChange={e => setSection(e.target.value)}>
@@ -51,6 +60,7 @@ function AddChordForm({ show, onHide, onChordAdded }) {
               <option value="bridge">Bridge</option>
             </select>
           </div>
+          */}
           <div className="d-flex justify-content-end">
             <Button variant="dark" type="submit" disabled={loading}>
               {loading ? 'Saving...' : 'Add Chord'}

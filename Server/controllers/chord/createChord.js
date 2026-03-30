@@ -8,10 +8,9 @@ const chordFilePath = path.join(__dirname, '../../dao/storage/chordList/chordLis
 const schema = {
     type: 'object',
     properties: {
-        name: { type: 'string' },
-        section: { type: 'string', enum: ['verse', 'chorus', 'bridge'] }
+        name: { type: 'string' }
     },
-    required: ['name', 'section'],
+    required: ['name'],
     additionalProperties: false
 };
 
@@ -38,8 +37,7 @@ module.exports = (req, res) => {
 
     const newChord = {
         id: Date.now(),
-        name,
-        section
+        name
     };
     chordList.push(newChord);
     fs.writeFileSync(chordFilePath, JSON.stringify(chordList, null, 2));

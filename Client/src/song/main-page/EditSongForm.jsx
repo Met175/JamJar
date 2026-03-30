@@ -53,6 +53,8 @@ function EditSongForm({ song, show, onHide, onSongUpdated }) {
     } finally {
       setLoading(false);
     }
+    onHide();
+    window.location.reload();
   };
 
   return (

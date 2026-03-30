@@ -31,15 +31,6 @@ function Navbar() {
                 Chords
               </Link>
             </li>
-            <li className="nav-item">
-              <button 
-                className="nav-link btn btn-link p-0" 
-                style={{color: 'inherit', textDecoration: 'none'}} 
-                onClick={e => { e.preventDefault(); setShowChordForm(true); }}
-              >
-                Add Chord
-              </button>
-            </li>
           </ul>
         </div>
       </div>

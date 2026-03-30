@@ -53,13 +53,13 @@ module.exports = (req, res) => {
 
         // Handle missing chords (if any)
         const missingChords = songData.chords?.filter(chord =>
-            !existingChords.some(existingChord => existingChord.chord === chord.chord)
+            !existingChords.some(existingChord => existingChord.name === chord.chord)
         );
 
         if (missingChords?.length > 0) {
             missingChords.forEach(missingChord => {
                 const newChordId = existingChords.length > 0 ? Math.max(...existingChords.map(c => c.id)) + 1 : 1;
-                existingChords.push({ id: newChordId, chord: missingChord.chord });
+                existingChords.push({ id: newChordId, name: missingChord.chord });
             });
             // Save updated chords list
             fs.writeFileSync(chordFilePath, JSON.stringify(existingChords, null, 2));

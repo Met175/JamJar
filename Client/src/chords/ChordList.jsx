@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import ChordDiagram from './ChordDiagram';
+import AddChordButton from './AddChordButton';
 
 function ChordList() {
   const [chords, setChords] = useState([]);
@@ -39,7 +40,10 @@ function ChordList() {
 
   return (
     <Container className="mt-4">
-      <h2 className="mb-4">Chord Library</h2>
+      <h1 className="mbd-4">Chord Library</h1>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '10px' }}>
+        <AddChordButton />
+      </div>
       <Row xs={1} md={2} lg={3} className="g-4">
         {chords.map((chord) => (
           <Col key={chord.id}>
@@ -60,9 +64,9 @@ function ChordList() {
                 aria-label="Delete chord"
               >×</button>
               <Card.Body>
-                <Card.Title className="text-center">{chord.chord}</Card.Title>
+                <Card.Title className="text-center">{chord.name || chord.chord}</Card.Title>
                 <div className="text-center mb-3">
-                  <ChordDiagram chord={chord.chord} />
+                  <ChordDiagram chord={chord.name || chord.chord} />
                 </div>
               </Card.Body>
             </Card>

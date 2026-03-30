@@ -52,6 +52,8 @@ function AddSongForm({ show, onHide, onSongAdded }) {
     } finally {
       setLoading(false);
     }
+    onHide();
+    window.location.reload();
   };
 
   return (
